@@ -1,0 +1,20 @@
+{
+  "name": "cognito-lambda",
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "node scripts/test.js --silent",
+    "build": "tsc",
+    "deploy-dev": "yarn build && serverless deploy --stage dev",
+    "deploy-staging": "yarn build-staging && serverless deploy --stage staging",
+    "deploy-prod": "yarn build-prod && serverless deploy --stage prod"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.137",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.12",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  }
+}

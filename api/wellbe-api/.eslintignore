@@ -1,0 +1,14 @@
+node_modules/
+**/node_modules/
+**/public/
+**/static/
+**/.cache/
+**/dist/
+**/lib/
+**/module/
+jest-setup.js
+**/out_functions
+**/out_publish
+**/build
+**/.netlify
+**/cypress-seed.js
