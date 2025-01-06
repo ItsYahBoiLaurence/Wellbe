@@ -61,7 +61,7 @@ const HomePage = () => {
         style={{
           width: '100%',
           height: '100%',
-          background: 'url(https://picsum.photos/200/300)',
+          background: 'url(https://picsum.photos/300/400)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -121,15 +121,15 @@ const HomePage = () => {
               />
             </Carousel.Slide>
           </Carousel>
-          {latestSurvey && (
-            <Box
-              style={{ display: 'flex', justifyContent: 'center', zIndex: 50 }}
-            >
-              <Link to={`/survey/${latestSurvey.id}`}>
-                <PrimaryButton>Start Your Well-being Journey</PrimaryButton>
-              </Link>
-            </Box>
-          )}
+
+          <Box
+            style={{ display: 'flex', justifyContent: 'center', zIndex: 50 }}
+          >
+            <Link to={`/survey`}>
+              <PrimaryButton>Start Your Well-being Journey</PrimaryButton>
+            </Link>
+          </Box>
+
         </Container>
         <Box
           component="img"
