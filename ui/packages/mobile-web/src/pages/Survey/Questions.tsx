@@ -230,16 +230,19 @@ import React, { useState, useEffect } from 'react';
 import { Box, Container, Progress, Button, Text, Card, Group } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { useNavigate } from 'react-router-dom';
+import api from './api'
 
 // Dummy survey data
 const dummySurvey = {
     questions: [
-        { id: 1, text: 'What is your favorite color?' },
-        { id: 2, text: 'How often do you exercise?' },
-        { id: 3, text: 'What is your preferred mode of transport?' },
-        { id: 4, text: 'What is your favorite type of cuisine?' },
+        { id: 1, text: 'I view setbacks as an opportunity to improve my skills' },
+        { id: 2, text: 'My responsibilities at work are clear to me' },
+        { id: 3, text: 'I feel financially secure' },
+        { id: 4, text: 'My family plays a big role in my life' },
     ],
 };
+
+
 
 // Choices with their values
 const choices = [
@@ -257,6 +260,27 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
     const [responses, setResponses] = useState({});
     const [selectedChoice, setSelectedChoice] = useState(null); // Track the selected choice
     const [isSurveyCompleted, setIsSurveyCompleted] = useState(false);
+    const [dataQ, setData] = useState(null);
+    const [questions, setQuestions] = useState({})
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const email = 'andrew@gmail.com';
+                const response = await api.get('http://localhost:2000/engine/generateQuestions', {
+                    params: { email } // Pass the email as a query parameter
+                });
+
+                setData(response.data); // Access response data directly
+                console.log(response.data); // Log the data to console
+            } catch (error) {
+                console.error(error); // Log error to console
+            }
+        };
+
+        fetchData();
+    }, []);
 
     // Update progress based on the current slide
     useEffect(() => {
@@ -267,6 +291,11 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
         // Reset selected choice when slide changes
         setSelectedChoice(responses[dummySurvey.questions[currentSlide]?.id] || null);
     }, [currentSlide]);
+
+
+
+
+
 
     // Handle choice selection
     const handleChoiceClicked = (value) => {
@@ -284,10 +313,10 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
         console.log('Survey Completed:', responses);
         changeStateFunction(status.COMPLETED)
     };
-
+    console.log(dataQ)
     const navigate = useNavigate();
-
     return (
+
         <Box style={{ height: '100%', paddingTop: 24, paddingBottom: 24 }}>
             <Container
                 style={{
@@ -314,7 +343,7 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
                         display: 'flex',
                         flexDirection: 'column',
                         flexGrow: 1,
-                        '& .mantine-Carousel-viewport': {
+                        '& .mantineCarouselViewport': {
                             height: '100%',
                             '& .mantine-Carousel-container': {
                                 height: '100%',
