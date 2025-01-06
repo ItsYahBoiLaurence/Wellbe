@@ -4,6 +4,11 @@ import { ValidationPipe } from '@nestjs/common/pipes/validation.pipe';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors({
+    origin: process.env.PORTUI, // Allow requests from this origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
+    credentials: true, // Allow cookies
+  });
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true, // Automatically strip fields not defined in the DTO
