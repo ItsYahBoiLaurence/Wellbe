@@ -9,7 +9,7 @@ import { Employee } from '../types';
 export type AuthContextProviderProps = {
   isAuthenticated: boolean;
   signOut: () => Promise<void>;
-  currentUser: Employee;
+  currentUser/*:Employee*/;
 };
 
 export const AuthContext = createContext<AuthContextProviderProps | null>(null);
@@ -20,6 +20,7 @@ const EXCLUDED_PATHS = [
   '/forgot-password',
   '/reset-password',
   '/otp',
+  'forget-password',
 ];
 
 export const AuthProvider = ({ children }: PropsWithChildren) => {
@@ -54,8 +55,8 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
   return (
     <AuthContext.Provider
       value={{
-        isAuthenticated: !!currentUser,
-        currentUser: currentUser as Employee,
+        isAuthenticated: /*!!currentUser*/false,
+        currentUser: /*currentUser as Employee*/ null,
         signOut,
       }}
     >

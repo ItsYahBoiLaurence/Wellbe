@@ -15,11 +15,11 @@ function App() {
       <MantineProvider theme={theme} stylesTransform={emotionTransform}>
         <MantineEmotionProvider>
           <QueryClientProvider client={queryClient}>
-            <AuthProvider>
-              <ProfileProvider>
-                <Routes />
-              </ProfileProvider>
-            </AuthProvider>
+            {/* <AuthProvider> */}
+            <ProfileProvider>
+              <Routes />
+            </ProfileProvider>
+            {/* </AuthProvider> */}
           </QueryClientProvider>
         </MantineEmotionProvider>
       </MantineProvider>

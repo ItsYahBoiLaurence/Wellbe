@@ -32,10 +32,10 @@ export const Card = (props: CardProps) => (
 );
 
 const MyWellBePage = () => {
-  const { currentUser } = useAuth();
-  const greetingMessage = currentUser?.firstName
-    ? `Great job, ${currentUser.firstName}!`
-    : 'Great job!';
+  // const { currentUser } = useAuth();
+  // const greetingMessage = currentUser?.firstName
+  //   ? `Great job, ${currentUser.firstName}!`
+  //   : 'Great job!';
 
   return (
     <Container
@@ -64,7 +64,8 @@ const MyWellBePage = () => {
       </Box>
       <Image src={MyWellBeIllustration} height={254} mt={24} />
       <Title order={2} mt={32} style={{ textAlign: 'center' }}>
-        {greetingMessage}
+        {/* {greetingMessage} */}
+        Hello there!
       </Title>
       <Text mt={16}>Here’s your Wellbe result for today</Text>
 
