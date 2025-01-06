@@ -27,6 +27,13 @@ export class AuthService {
         answers: {},
         submitCount: 0,
         submitLog: [],
+        tipLog: [],
+        weeklyLog: {
+          P: [],
+          W: [],
+          SLS: [],
+          SFM: [],
+        },
       });
 
       return await employee.save();

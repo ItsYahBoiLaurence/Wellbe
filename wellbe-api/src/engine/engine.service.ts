@@ -240,11 +240,11 @@ export class EngineService {
     //list of advice
     Logger.log(updatedData);
 
-    const ai = await this.openAIService.generateText(
-      "Make me an one summarized paragraph advise based on this data. And I want you to respose like your're taking with Andrew Sanches His/her name is Andrew Sanchez, here's the data:" +
+    const message = await this.openAIService.generateText(
+      "Make me an one summarized paragraph advise based on this data. And I want you to respose like your're taking with his/her, here's the data:" +
         JSON.stringify(updatedData),
     );
-    Logger.log(ai);
+    Logger.log(message);
 
     //Log the advise
     //
@@ -268,17 +268,29 @@ export class EngineService {
     Logger.log(submitLogs);
     submitLogs.push(dateToday);
 
+    let tipLogs = [];
+    tipLogs = answerData.tipLog;
+    tipLogs.push(message);
+
     for (const [key, value] of Object.entries(resultDeclared)) {
       const fieldName = 'WEEK' + numberWeeks.toString();
       const updateObject = {
         [`answers.${fieldName}.${key}`]: value,
         submitCount: countSubmit,
         submitLog: submitLogs,
+        tipLog: tipLogs,
       };
       await answerCollection.updateOne(
         { email: _recordAnswerDTO.email },
         { $set: updateObject },
       );
     }
+
+    return {
+      message: {
+        advise: message,
+      },
+      status: HttpStatus.OK,
+    };
   }
 }
