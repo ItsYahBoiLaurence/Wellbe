@@ -7,4 +7,4 @@ import { OpenAIService } from 'src/openai/openai.service';
   controllers: [EngineController],
   providers: [EngineService, OpenAIService],
 })
-export class EngineModule {}
+export class EngineModule { }

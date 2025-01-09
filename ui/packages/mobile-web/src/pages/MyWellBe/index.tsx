@@ -13,6 +13,8 @@ import CalendarTodayIcon from '../../components/icons/CalendarTodayIcon';
 import ThumbDownIcon from '../../components/icons/ThumbDownIcon';
 import ThumbUpIcon from '../../components/icons/ThumbUpIcon';
 import { useAuth } from '../../hooks/useAuth';
+import { useEffect, useState } from 'react';
+import api from '../../api/api';
 
 type CardProps = BoxProps & ElementProps<'div', keyof BoxProps>;
 
@@ -36,6 +38,23 @@ const MyWellBePage = () => {
   // const greetingMessage = currentUser?.firstName
   //   ? `Great job, ${currentUser.firstName}!`
   //   : 'Great job!';
+
+  const [tip, setTip] = useState("");
+
+  useEffect(() => {
+    const getDailyTip = async () => {
+
+      try {
+        await api.get('/engine/get-tip')
+          .then((response) => setTip(response.data))
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    getDailyTip();
+  }, [tip])
+
 
   return (
     <Container
@@ -72,7 +91,7 @@ const MyWellBePage = () => {
       {/* TODO: use real data */}
       <Card mt={24}>
         <Text>
-          <strong>Your results in the behavioral indicators is average.</strong>{' '}
+          {/* <strong>Your results in the behavioral indicators is average.</strong>{' '}
           This suggests that your level of behavioral manifestations is within
           the normal range of the population. <br />
           <br />
@@ -82,7 +101,8 @@ const MyWellBePage = () => {
           Occassionally you may suffer from feelings of preooccupation and
           inattention, but you know that you can accomplish tasks once you set
           your mind on them. You are able to maintain your physical appearance
-          and your difficulties do not interfere with your daily functioning.
+          and your difficulties do not interfere with your daily functioning. */}
+          {tip ? tip : "Loading"}
         </Text>
       </Card>
 

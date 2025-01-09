@@ -13,8 +13,25 @@ export class EngineService {
     @InjectConnection() private readonly connection: Connection,
     private readonly cacheService: CacheService,
     private readonly openAIService: OpenAIService,
-  ) {}
+  ) { }
 
+
+  async deleteData(thisEmail: String) {
+    const userAnswers = this.connection.collection('engine-answers');
+    const userProfiles = this.connection.collection('employees');
+
+    try {
+      await userAnswers.deleteMany({ email: thisEmail });
+      await userProfiles.deleteMany({ email: thisEmail });
+      return { prompt: "success" }
+    }
+    catch {
+      return { error: "failed" }
+    }
+  }
+
+
+  //<--------------->
   async generateQuestions(
     _generateQuestionsDTO: GenerateQuestionDTO,
   ): Promise<object> {
@@ -147,12 +164,7 @@ export class EngineService {
       await this.cacheService
         .set(storeSessionKey, storeSessionValue, 300)
         .then();
-      return new HttpException(
-        {
-          questions: result,
-        },
-        HttpStatus.OK,
-      );
+      return result
     } catch (error) {
       return {
         message: 'Error generating question | ' + error,
@@ -161,6 +173,7 @@ export class EngineService {
     }
   }
 
+  //<--------------->
   async recordAnswer(_recordAnswerDTO: RecordAnswerDTO): Promise<object> {
     let answeredQuestions = [];
     const answerCollection = await this.connection.collection('engine-answers');
@@ -242,7 +255,7 @@ export class EngineService {
 
     const message = await this.openAIService.generateText(
       "Make me an one summarized paragraph advise based on this data. And I want you to respose like your're taking with his/her, here's the data:" +
-        JSON.stringify(updatedData),
+      JSON.stringify(updatedData),
     );
     Logger.log(message);
 
@@ -293,4 +306,40 @@ export class EngineService {
       status: HttpStatus.OK,
     };
   }
+
+
+  async getTipLog(email: string): Promise<object> {
+    const answerCollection = this.connection.collection('engine-answers');
+
+    try {
+      // Find the user's document by email
+      const userData = await answerCollection.findOne({ email: "andrew@gmail.com" });
+
+      // Check if the user exists
+      if (!userData) {
+        throw new HttpException(
+          {
+            status: HttpStatus.NOT_FOUND,
+            message: 'User not found.',
+          },
+          HttpStatus.NOT_FOUND,
+        );
+      }
+      // Extract the tipLog
+      const tipLog = userData.tipLog[userData.tipLog.length - 1] || [];
+
+      // Return the tip log
+      return tipLog
+    } catch (error) {
+      throw new HttpException(
+        {
+          status: HttpStatus.INTERNAL_SERVER_ERROR,
+          message: error,
+        },
+        HttpStatus.INTERNAL_SERVER_ERROR,
+      );
+    }
+  }
+
+
 }

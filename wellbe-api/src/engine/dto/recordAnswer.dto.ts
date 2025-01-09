@@ -26,3 +26,4 @@ export class RecordAnswerDTO {
   @IsNotEmpty({})
   SFM: number;
 }
+

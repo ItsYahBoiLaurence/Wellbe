@@ -225,24 +225,11 @@
 // };
 
 // export default SurveyQuestions;
-
 import React, { useState, useEffect } from 'react';
 import { Box, Container, Progress, Button, Text, Card, Group } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import { useNavigate } from 'react-router-dom';
-import api from './api'
-
-// Dummy survey data
-const dummySurvey = {
-    questions: [
-        { id: 1, text: 'I view setbacks as an opportunity to improve my skills' },
-        { id: 2, text: 'My responsibilities at work are clear to me' },
-        { id: 3, text: 'I feel financially secure' },
-        { id: 4, text: 'My family plays a big role in my life' },
-    ],
-};
-
-
+import api from '../../api/api';
 
 // Choices with their values
 const choices = [
@@ -252,71 +239,85 @@ const choices = [
     { label: 'Strongly Agree', value: 4 },
 ];
 
+// Transform the survey object into an array for easier processing
+
+
 // Main Survey Component
 const SurveyComponent = ({ changeStateFunction, status }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [progressValue, setProgressValue] = useState(0);
     const [carousel, setCarousel] = useState(null);
     const [responses, setResponses] = useState({});
-    const [selectedChoice, setSelectedChoice] = useState(null); // Track the selected choice
+    const [selectedChoice, setSelectedChoice] = useState(null);
     const [isSurveyCompleted, setIsSurveyCompleted] = useState(false);
-    const [dataQ, setData] = useState(null);
-    const [questions, setQuestions] = useState({})
+    const [dummySurvey, setDummySurvey] = useState({})
 
+    const surveyQuestions = Object.entries(dummySurvey).map(([id, text]) => ({
+        id,
+        text,
+    }));
+    // Update progress based on the current slide
 
+    useEffect(() => {
+        if (surveyQuestions.length > 0) {
+            const progress = ((currentSlide + 1) / surveyQuestions.length) * 100;
+            setProgressValue(progress);
+            setSelectedChoice(responses[surveyQuestions[currentSlide]?.id] || null);
+        }
+    }, [currentSlide, responses]);
+
+    // Fetch data (if required)
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const email = 'andrew@gmail.com';
-                const response = await api.get('http://localhost:2000/engine/generateQuestions', {
-                    params: { email } // Pass the email as a query parameter
-                });
-
-                setData(response.data); // Access response data directly
-                console.log(response.data); // Log the data to console
+                const params = { email: 'andrew@gmail.com' };
+                const response = await api.get('/engine/generateQuestions', { params });
+                console.log('Fetched Data:', response.data);
+                setDummySurvey(response.data)
             } catch (error) {
-                console.error(error); // Log error to console
+                console.error('Error fetching data:', error);
             }
         };
-
         fetchData();
     }, []);
-
-    // Update progress based on the current slide
-    useEffect(() => {
-        if (dummySurvey.questions.length > 0) {
-            const progress = ((currentSlide + 1) / (dummySurvey.questions.length)) * 100; // Include the "Thank You" slide
-            setProgressValue(progress);
-        }
-        // Reset selected choice when slide changes
-        setSelectedChoice(responses[dummySurvey.questions[currentSlide]?.id] || null);
-    }, [currentSlide]);
-
-
-
-
-
 
     // Handle choice selection
     const handleChoiceClicked = (value) => {
         setResponses((prev) => ({
             ...prev,
-            [dummySurvey.questions[currentSlide].id]: value,
+            [surveyQuestions[currentSlide].id]: value,
         }));
         setSelectedChoice(value);
-        carousel.scrollNext();
+        if (carousel) carousel.scrollNext();
     };
 
-    // Handle submit action
+    function transformData(data: { [key: string]: number }): string {
+        // Convert the data object into a JSON string with proper formatting
+        const jsonString = JSON.stringify(data);
+
+        // Return the transformed JSON string
+        return jsonString;
+    }
+
+    // Handle survey submission
     const handleSubmit = () => {
         setIsSurveyCompleted(true);
         console.log('Survey Completed:', responses);
-        changeStateFunction(status.COMPLETED)
-    };
-    console.log(dataQ)
-    const navigate = useNavigate();
-    return (
+        const data = {
+            "email": "andrew@gmail.com",
+            ...responses
+        }
+        try {
+            api.post('engine/recordAnswer', data).then((res) => console.log(res))
 
+        } catch (error) {
+            console.log(error)
+        }
+
+        changeStateFunction(status.COMPLETED);
+    };
+
+    return (
         <Box style={{ height: '100%', paddingTop: 24, paddingBottom: 24 }}>
             <Container
                 style={{
@@ -328,71 +329,70 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
                 }}
             >
                 <Text style={{ fontSize: '32px', marginBottom: '32px' }}>Questions</Text>
-                {/* Progress Bar */}
                 <Box style={{ marginBottom: 32 }}>
                     <Progress value={progressValue} />
                 </Box>
 
                 {/* Carousel */}
-                <Carousel
-                    getEmblaApi={(embla) => setCarousel(embla)}
-                    withControls={false}
-                    onSlideChange={(index) => setCurrentSlide(index)}
-                    slideGap={32}
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        flexGrow: 1,
-                        '& .mantineCarouselViewport': {
-                            height: '100%',
-                            '& .mantine-Carousel-container': {
-                                height: '100%',
-                            },
-                        },
-                    }}
-                >
-                    {dummySurvey.questions.map((question, index) => (
-                        <Carousel.Slide key={question.id}>
-                            <Card
-                                shadow="md"
-                                radius="lg"
-                                style={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    height: '100%',
-                                    padding: 32,
-                                }}
-                            >
-                                <Text size="xl" weight={700} align="center" mb="md">
-                                    {question.text}
-                                </Text>
-                                <Group style={{ marginTop: 24 }}>
-                                    {choices.map((choice) => (
+                {surveyQuestions.length > 0 ? (
+                    <Carousel
+                        getEmblaApi={setCarousel}
+                        withControls={false}
+                        onSlideChange={(index) => setCurrentSlide(index)}
+                        slideGap={32}
+                        style={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            flexGrow: 1,
+                            '& .mantineCarouselViewport': { height: '100%' },
+                            '& .mantineCarouselContainer': { height: '100%' },
+                        }}
+                    >
+                        {surveyQuestions.map((question, index) => (
+                            <Carousel.Slide key={question.id}>
+                                <Card
+                                    shadow="md"
+                                    radius="lg"
+                                    style={{
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        height: '100%',
+                                        padding: 32,
+                                    }}
+                                >
+                                    <Text size="xl" weight={700} align="center" mb="md">
+                                        {question.text}
+                                    </Text>
+                                    <Group style={{ marginTop: 24 }}>
+                                        {choices.map((choice) => (
+                                            <Button
+                                                key={choice.value}
+                                                variant={selectedChoice === choice.value ? 'filled' : 'outline'}
+                                                color={selectedChoice === choice.value ? 'blue' : 'gray'}
+                                                onClick={() => handleChoiceClicked(choice.value)}
+                                            >
+                                                {choice.label}
+                                            </Button>
+                                        ))}
+                                    </Group>
+                                    {index === surveyQuestions.length - 1 && (
                                         <Button
-                                            key={choice.value}
-                                            variant={selectedChoice === choice.value ? 'filled' : 'outline'}
-                                            color={selectedChoice === choice.value ? 'blue' : 'gray'}
-                                            onClick={() => handleChoiceClicked(choice.value)}
+                                            style={{ marginTop: 32 }}
+                                            onClick={handleSubmit}
+                                            disabled={!selectedChoice}
                                         >
-                                            {choice.label}
+                                            Submit
                                         </Button>
-                                    ))}
-                                </Group>
-                                {index === dummySurvey.questions.length - 1 && (
-                                    <Button
-                                        style={{ marginTop: 32 }}
-                                        onClick={handleSubmit}
-                                        disabled={!selectedChoice} // Disable if no choice is selected
-                                    >
-                                        Submit
-                                    </Button>
-                                )}
-                            </Card>
-                        </Carousel.Slide>
-                    ))}
-                </Carousel>
+                                    )}
+                                </Card>
+                            </Carousel.Slide>
+                        ))}
+                    </Carousel>
+                ) : (
+                    <Text color="red">No questions available to display.</Text>
+                )}
             </Container>
 
             {/* Overlay (Optional Placeholder) */}
@@ -402,7 +402,7 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
                     bottom: 0,
                     width: '100%',
                     height: '50%',
-                    background: 'rgba(0, 0, 0, 0.1)', // Placeholder for an overlay
+                    background: 'rgba(0, 0, 0, 0.1)',
                     opacity: 0.5,
                 }}
             />
@@ -411,5 +411,3 @@ const SurveyComponent = ({ changeStateFunction, status }) => {
 };
 
 export default SurveyComponent;
-
-
