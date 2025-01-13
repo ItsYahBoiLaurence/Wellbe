@@ -1,0 +1,37 @@
+{
+  "companyName": "Sample Company",
+  "departmentNames": ["DepartmentSample"],
+  "users": [
+    {
+      "_id": "sample@email.com",
+      "firstName": "FSample",
+      "lastName": "LSample",
+      "role": "employee",
+      "department": "DepartmentSample",
+      "profileImage": "Picture",
+      "answerSets": [
+        {
+          "Character": [0, 0, 0, 0, 0, 0, 0],
+          "Career": [0, 0, 0, 0, 0, 0, 0],
+          "Contentment": [0, 0, 0, 0, 0, 0],
+          "Connectedness": [0, 0, 0, 0, 0],
+          "SessionNumber": 0
+        }
+      ],
+      "statisticsSets": [],
+      "adviseSets": [],
+      "frequencySets": {
+        "frequency": "DAILY/WEEKLY/MONTHLY/",
+        "initialDate": "MMDDYYYY"
+      }
+    },
+
+    {
+      "_id": "andrew@gmail.com",
+      "firstName": "Andrew",
+      "lastName": "Santos",
+      "role": "admin",
+      "profileImage": "asdas"
+    }
+  ]
+}

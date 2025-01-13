@@ -1,0 +1,597 @@
+[
+  {
+    "domain": "Character",
+    "questions": [
+      {
+        "subDomain": "Competence",
+        "question": "I view setbacks as an opportunity to improve my skills.",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. Things may be difficult right now so it's completely okay to start small. Just focus on the things that you can control, and don't blame yourself for the things that you can't. Take a deep breath, slowly build yourself back up before jumping into things again. Patience is key!"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. You would do well to improve your control over things and strengthen your sense of autonomy. List down the things you can control and those that you can't. Focus on the former, and if you can do that with consistency, you will slowly strengthen your wellbeing!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. Keep it up, you are doing well to maintain your psychological wellbeing! Keep doing what you are good at and focusing on the things you can control. Things feel much more stable and manageable because you have a good sense of autonomy."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average and you are doing better than most of the population. Your excellent sense of autonomy and ownership over what you can control has bolstered your psychological wellbeing. What are you grateful for? Give appreciation to the people and experiences that have allowed you to maximize your wellbeing!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Competence",
+        "question": "I know that I am good at what I do?",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. You may be doubting your abilities and it's normal to feel that way sometimes. Remember that you're where you are at right now because you are good at what you do. Think back to all your previous accomplishments as they are proof of your growth over the years."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. There will be times where we don't perform the way we want to, and that's okay. Take a step back, evaluate where things may be going wrong, and find ways to improve. Don't let this temporary setback keep you down for long. You can always bounce back!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. You're utilizing your capabilities well and are able to get yourself out of situations that others struggle with. Best of all, you can still find more opportunities to grow! Attend a workshop, find a mentor, take a free online course; any opportunity to broaden your horizons and expand your skills!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average. There's no setback or challenge that can bring you down! You are at peak performance and you know that you are good at what you do. Still, don't let this stop you from finding ways to improve your skills. Let's always strive to be the best version of ourselves!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Positive Emotions - Interest",
+        "question": "I am open to new experiences",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "You scored low in Character. It can be quite hard to come across positive emotions recently, you might be easily frustrated, feeling tired, or in a slump. Let's start small by giving yourself something to look forward to. What's one thing you are looking forward to this week?"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. Let's turn that frown upside down! Make time this week for intentional rest, even just an hour of engaging in your hobbies or interests. Watch that movie, go on that jog, pick up that novel again, or tune in to your favorite playlist."
+          },
+          {
+            "level": "Average",
+            "text": "Great job, your Character score is average! Research shows that to feel at your best, it is ideal to have 3 positive interactions for every negative interaction. This is called the 3:1 positivity ratio, keep this in mind and you will surely elevate your experience of positive emotions."
+          },
+          {
+            "level": "Above Average",
+            "text": "Amazing! Your Character score is excellent! Your best self is definitely within reach and you have everything you need to flourish! Think about how you can share this experience with others, and how you can help them experience positive emotions as well. Bring along everyone with you and spread the positivity!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Competence",
+        "question": "I have the capability to overcome challenges",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. There are times when we may feel helpless in the face of problems, so let's take a moment to calm down. Deep breaths — 1, 2, 3. Look at the problem, think about it, but don't let it overcome you. You don't have to face these problems alone. You may consult the Internet, your co-workers, bosses, and others to help you find the information and solutions needed."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. You may not feel like it yet but you, as an individual, can bring about positive changes for others. Compass needles only move when you do, so take the advice you gained from other people and the knowledge that you have to execute the solution in mind. Implement it, and see where it goes. You would never know if it works if you don't try."
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. You are a persevering and adaptive individual! When things don't go as planned, however, do not lose hope. Obstacles will get in our way more often than not, so it is always good to prepare Plan A, Plan B, and Plan C. Anticipate other problems that may arise, and attempt to foresee the ways you can resolve them. Before you know it, untangling these problems has helped your project grow better in quality."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average, you are positively relentless in your ways! With relentlessness comes assurance, but never forget that there are myriad ways to solve problems. Always be open-minded to different strategies, evolve in your solution-making, and weigh the pros and cons fairly. Learn to be receptive to unique or new solutions."
+          }
+        ]
+      },
+      {
+        "subDomain": "Positive Emotions - Hope",
+        "question": "I am capable of changing my future for the better",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. Negative thoughts are overwhelming you, affecting your wellbeing. Sometimes your daily functions are affected by negative thinking, but don't worry! Stop for a moment, take a breather and unwind. Try surrounding yourself with positivity and avoid negative triggers."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. Positivity is surrounding you but it seems as if it yields no effect, don't worry! Everything is a process. For starters, try incorporating positive triggers in your daily routine. Find something that makes you happy and add it in your daily routine. Keep the positivity flowing!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. Great job for working on sustaining positive practices! Remember that your well-being brings the best out of you. Keep yourself surrounded with positive emotions, and have a strong support group to keep you standing."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average. You are at the peak of positive emotions! You might face some challenges, but that doesn't bother you because of your resiliency. To better sustain this, why not try to promote a positive environment? Be the ripple of positive change in your environment to promote positive emotions."
+          }
+        ]
+      },
+      {
+        "subDomain": "Autonomy",
+        "question": "I can stand by my decisions even if others do not support it",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. You may be doubting your capabilities right now. Your thoughts and opinions are valuable in the workplace, so the best way you can practice expressing this is by writing in a journal; vocalizing your thoughts in a discussion; or pursuing artistic activities (drawing, making music, dancing, etc.) Don't undermine the things you can contribute at work!"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. There may be times when you don't feel like you are on your A-game, and that's okay. Try to set goals for the situation at hand, and come up with ways to attain them. Your objectives will help you pursue your decisions, and see where you can further improve on them in the long run. It's never bad to take initiative!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. Keep it up, it's important to trust your own choices as well! Find a coping strategy that works for you when things don't go as planned. Learn how to turn loss into motivation, and use these weaknesses as an opportunity to build on your next course of action. There is always a way to improve on your decision-making skills!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average. Good job, continue having confidence in the choices that you make! Creating avenues where you can discuss your options with your teammates could be a great way to enhance understanding, and overcome challenges with one another. Inspire the same autonomy in others by allowing them to express their thoughts, in return. It's always good to build rapport with the team!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Competence",
+        "question": "I am able to find a solution for problems I encounter",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Character score is low. It's alright to feel overwhelmed with all the responsibilities you carry. We can lessen this burden by analyzing our current situation. Let's focus on one single problem at a time. How about we do the most urgent task for this week? Let's slowly grow and work around problems over time."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Character score is below average. Feeling inadequate about your skills is completely valid. Sometimes working harder isn't always the answer. Taking a break is normal and would help avoid burnout. In the meantime, how about planning your short-term and long-term goals and working toward them? Taking a rest and evaluating our journey is essential!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Character score is average. It's good you're handling your responsibilities well, but we can take things up a notch. How about looking at challenges as opportunities for us to improve our skills? Having a growth mindset will help us realize that our skills can be improved as time passes by! Good luck!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Character score is above average. Congratulations on coming a long way! The journey of developing competence never stops. Now that you've accomplished yourself, why not share the positivity? Share your insights and recommendations with others who share the same path as you. Guiding and helping others is another journey itself. I wish you luck!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "Career",
+    "questions": [
+      {
+        "subDomain": "Opportunity for Skill Use",
+        "question": "The unique skills I possess are valued in the workplace",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your career score is low. Work might feel more draining right now, but having difficulties is okay. Think about even small wins with what you do at work you can celebrate. This might help bring some momentum needed to breathe new life into your job."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your career score is below average. You might be experiencing fatigue from your job, which is normal when things get fast-paced or repetitive. Adding some variety to your routine might help you get out of your slump, and taking time to slow down and regroup might give a more positive perspective on your responsibilities."
+          },
+          {
+            "level": "Average",
+            "text": "Your career score is average. Great job hanging in there! You must be well-adjusted at your job and have a good outlook at work. If you feel up to a challenge, try learning some new skills that you'd be able to apply at work. Building more capabilities can open up new opportunities for your career."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is high. You're doing great! You must be feeling energized and appreciated by people you work with. You're able to keep passion in your craft, and you can share your passion with your peers. Reach out to your struggling co-workers and offer some advice with work tasks you have a lot of experience in."
+          }
+        ]
+      },
+      {
+        "subDomain": "Physical Security",
+        "question": "My workplace has all the necessary equipment that I need",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your career is currently struggling, and it may be time to reassess your goals, skills, and overall direction. Consider seeking mentorship or additional training to help move forward."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your career is in an okay place but might not be progressing as expected. Look for opportunities to expand your skill set and seek feedback from colleagues or supervisors to help guide your development."
+          },
+          {
+            "level": "Average",
+            "text": "Your career is on a steady path. Keep focusing on improving your skills and taking on new challenges to ensure continued growth and advancement."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your career is thriving, and you are likely excelling in your field. Continue seeking out leadership opportunities and push yourself to take on projects that will further elevate your expertise and reputation."
+          }
+        ]
+      },
+      {
+        "subDomain": "Supportive Supervision",
+        "question": "I feel comfortable going to my boss for help",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Career score is low. Work gets draining if you feel like you can't approach others for help. Relationships with supervisors might not be the best, so try to find a support system or network of helpful mentors that can guide you through the struggles of the organization."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Career score is below average. Work gets draining if you feel like you can't approach others for help. It might be worth opening up to your supervisors about what you're struggling with and the kind of support you need."
+          },
+          {
+            "level": "Average",
+            "text": "Your Career score is average. You have an okay relationship with your supervisors, and you can strengthen this in work-appropriate ways. Show them you're eager to learn and contribute to the organization, as most leaders and managers appreciate seeing effort from others, and maybe even lead to rewards and recognition."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is above average. You feel that your workplace is a safe and open environment. It's easy to approach almost anyone of your co-workers, regardless of their rank. Hopefully, you can spread this positive work culture to others around you, especially those who look like they need a helping hand."
+          }
+        ]
+      },
+      {
+        "subDomain": "Opportunity for Interpersonal Contact",
+        "question": "I am able to form good relationships at work",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Career score is low. It's okay, work might be stressful lately. You might be experiencing that you are alone with your tasks. Try doing one task at a time and reach out for help from colleagues when you're overwhelmed. You don't have to bear it all alone."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Career score is below average. Work would be better if you could connect with your colleagues. Try initiating a talk about your interests during break. Look for common interests and plan a day to do it. It takes time to be connected but it is already progress!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Career score is average. You are doing well to make your time with work count! Try collaborating more with your colleagues on different tasks to interact more. Having a stable stream of tasks can build your workplace relationship more. This could help work feel easier."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is above average. Great job on maintaining a healthy work journey! How are your friendships at work lately? Be intentional today at work by offering to help a colleague with their tasks. Intentionality could help a lot with appreciating your relationships with colleagues!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Valued Social Position",
+        "question": "I am proud to be part of the organization I work in",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Career score is low. Work might not be so appealing to you right now, and that's alright. Try getting to know more about your work, starting from its vision and mission statement, and see how it can align to your own. It can lead to a spark of connection!"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Career score is below average. Ease into work by closely observing its culture and commitment to its goals. From there, you can discover something about your work that makes you appreciate it more. Have hope and an open mind, and work will feel much more rewarding this way!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Career score is average. Well-done for identifying with your work in a positive and healthy manner! Keep the momentum going by checking in once in a while how work adds value into your life, and how you may give value back in your own unique ways."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is above average. Amazingly, you are able to be in synergy with your work! Now that you have a great bond with your work, begin communicating its value with others so they can be on the same tight work alignment as you. Positivity and pride are powerful things, so pass them on!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Variety",
+        "question": "I am constantly learning new things at work",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Career score is low. It's fine if work might be draining now. You might be feeling that work is repetitive and routinary. Try collaborating with a colleague with a task to add variety to your routine. You might learn a new skill from the task!"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Career score is below average. Work could be better if you try to make systems in your working routine. Improving systems can make a difference in the repetitiveness of tasks. This could make work more efficient and less tedious!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Career score is average. Keep it up, you're making work seem more varied! Try to consult with your boss regarding different work opportunities. Take a stab by leading one opportunity if you can to learn new skills and competencies. Changes can make work less repetitive!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is above average. You are doing great in making work more fun by learning! Be more proactive by voicing out your ideas and suggestions during meetings to stimulate discussions. Maximize learning within the team to add more variety for better well-being."
+          }
+        ]
+      },
+      {
+        "subDomain": "Environmental Clarity",
+        "question": "My responsibilities at work are clear to me",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Career score is low. You may be feeling lost about your day-to-day tasks, and that's okay! Look into your job description and ask yourself, what is the purpose of my position? Having clear work expectations can allow you to be accountable and take ownership of your work."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Career score is below average. See things through by finding out about your coworkers' roles and responsibilities. Look around you, who's there and what's happening? A shared understanding of work can help you align your actions towards a singular goal for the organization."
+          },
+          {
+            "level": "Average",
+            "text": "Your Career score is average. Your responsibilities at work come crystal clear to you, and that's excellent! Increase your environmental clarity by promoting transparency and communication. Let people have the freedom to share their ideas and ask questions about their deliverables. Have everyone on the same page!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Career score is above average. It's fantastic that you can do what's expected of you even in the face of rapid change and organizational shifts. Perform your best by contributing to the framework of norms in the workplace. Guide interactions and approaches to work. Plant trust this way!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "Contentment",
+    "questions": [
+      {
+        "subDomain": "Life Satisfaction",
+        "question": "I have everything I need in life",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. Life is not going the way you planned right now, but there's nothing to put yourself down for. You've made it this far, and you can try focusing on the few things you truly need right now. What would those be?"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. You might feel like your life needs a little more of something to feel more satisfaction, and that's okay. What things in your week helped you feel satisfied with life? Getting more of those in the weeks ahead might help you feel more content with your day."
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is average. Well done! You are engaging with the activities that bring you satisfaction in life. To boost this score, try identifying some personal goals you may have for yourself. See if your current activities help you towards those goals, and which new ones you might be inclined to take on."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is above average. You seem quite satisfied with your life, and may even feel that you already have what you need. To maintain your score, practice gratitude! Listing the things you're grateful for will make them difficult to forget when things get stressful."
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Good Economic Condition",
+        "question": "I am satisfied with my current salary",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. Finances are not in good shape right now, but they can improve. Create a budget based on your monthly income, expenses, and savings. To stay motivated, make a list of short and long-term financial goals. If your financial condition changes, use it as a guide and make adjustments."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. Keep an eye on where your money is going. Examine your receipts, medical bills, tax records, banking and insurance information on a regular basis. Check if they all stick to your budget, and remember to set aside funds for your desired lifestyle."
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is average. Good for you to meet current financial obligations and be prepared for the future! Ensure your financial stability by becoming more educated about money in the workplace. Have you checked out debt advice services and local credit unions in your organization? Work may be there for you to sort these things out."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is above average. Capitalize on your good relationship with money by understanding opportunity costs. Spending money on a vacation may not be actually saving money, but it can be good for you to take a break and go back to work refreshed. Allow these financial decisions to enjoy life!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Housing and Quality of Neighborhood",
+        "question": "I am satisfied with my current living conditions",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. This is not on you, however, and might be connected to your home environment. What is something within your means that you can do to make your home more comfortable? A change in your personal space could make a good difference with your wellbeing."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. You're doing well for yourself, but there may be unease or tension where you're living in. Whether a housemate or neighbor, it might be time to talk to them to clear the air. A light conversation with someone you often see might be what you need in your week."
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is average. That's great! Your living space has what you need to keep you satisfied with your weekly routines. To raise your contentment, what can you change in your living space to better help you with your current goals? These small changes can make them easier to reach."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is above average. You've adapted well to your living situation and the people you share it with. Be sure to maintain these relationships by giving an out-of-pocket treat or keeping them company after a tough day at work. These unexpected gestures can often brighten someone's day when they needed it most."
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Good Economic Condition",
+        "question": "I do not worry about my daily expenses",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. It's alright to have trouble with your expenses; you are not alone! Let's take a step back and analyze our situation. How's your budget plan? Make sure to keep track of your expenses and remove any unnecessary costs! I know money is a little tight right now, let's hang on."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. You're gaining control of your finances, however, we can make it better. Maybe find a way to increase your source of income. Let's strive harder for that promotion or find a side hustle to raise your revenue. I know it's tiring, but it will be worth it!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is average. You're doing great! Now you're earning enough that you're no longer worried about finances and have some money left over! Have you finalized your investment strategy and learned more about real estate or mutual funds? Let's make our savings work for us! However, we must be cautious of scammers and swindlers!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is above average. I'm proud of your progress! With all the funds you have earned, maybe it's time to use it for better purposes. Have a vacation or two, donate to charity, and, most especially, ensure that life is not all about money. Let's enjoy life while being thankful for the blessings received."
+          }
+        ]
+      },
+      {
+        "subDomain": "Life Satisfaction",
+        "question": "I can say that I am satisfied with my life",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. It's completely valid to feel like you are not satisfied with your life right now. Think of your current circumstances, both at work and at home, and try to point out the things that dissatisfy you. Identify your specific feelings towards them; why do you feel this way? What makes you discontent about them?"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. Something may be hindering you from achieving a balanced work-and-home life. When you have finally pointed out the things that make you discontent, what can you do about it in your own capabilities? You don't have to resolve a complex problem all at once. Think small baby steps!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is Average. It's good to know when to settle for something good, and when you shouldn't if it can be better! List down the things that fulfill your needs, wants, expectations, or wishes; what effect does it do for your work-and-home life? Think of ways you can improve these means in order to make it holistic for your wellbeing."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is Above Average. We're glad that things are going well for you! Now, let's take a step back and think of what you can do to extend this satisfaction to others. The collective wellbeing of other people increases your own well-being, especially because it helps the emotional state, and self-worth of persons; as well as strengthens resource pooling, and teamwork to achieve everyone's needs and wants."
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Good Economic Condition",
+        "question": "I feel financially secure",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Contentment score is low. It's completely valid to feel like you are not satisfied with your life right now. Think of your current circumstances, both at work and at home, and try to point out the things that dissatisfy you. Identify your specific feelings towards them; why do you feel this way? What makes you discontent about them?"
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Contentment score is below average. Something may be hindering you from achieving a balanced work-and-home life. When you have finally pointed out the things that make you discontent, what can you do about it within your capabilities? You don't have to resolve a complex problem all at once. Think small baby steps!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Contentment score is average. It's good to know when to settle for something good, and when you shouldn't if it can be better! List down the things that fulfill your needs, wants, expectations, or wishes; what effect does it have on your work-and-home life? Think of ways you can improve these means in order to make it holistic for your wellbeing."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Contentment score is above average. We're glad that things are going well for you! Now, let's take a step back and think of what you can do to extend this satisfaction to others. The collective wellbeing of other people increases your own well-being, especially because it helps the emotional state, and self-worth of persons; as well as strengthens resource pooling and teamwork to achieve everyone's needs and wants."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "domain": "Connectedness",
+    "questions": [
+      {
+        "subDomain": "Filipino Well-being - Family",
+        "question": "I do not relate well with my family members",
+        "type": "Negative",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Connectedness score is low. It’s fine if you might be feeling distant from your loved ones recently. You could try to be present in a family gathering today and engage in small talks. Communicating with your family might help bring meaning to life. This might strengthen you, as well."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Connectedness score is below average. Relating with family members may seem odd for you right now. You could try involving in the things that they find interesting and try to do them together. Improving your family ties can also help you cultivate meaning into life."
+          },
+          {
+            "level": "Average",
+            "text": "Your Connectedness score is average. Keep up being involved in your family! Draw more meaning by creating a habit to do more activities together and spending time with each other. List down the activities that you want to do together and try achieving them one at a time."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Connectedness score is above average. Great job on being proactive with your relationship with your family! Appreciate a family member today by being supportive with what they are doing, by hugging them, or by writing a small appreciation note that could make them feel valued. Meaning can be more evident by valuing!"
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Religion and Spiritual Life",
+        "question": "My life has meaning",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "You scored low in Connectedness. It can be hard to stay motivated if you don’t find meaning in what you are doing. It might help to find something in your life that can ground you during difficult times. Having purpose can help push you forward."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Connectedness score is below average. There may be aspects of your life that bring you hope and faith, but you might not be aware of them yet. Take a look into the things you feel provide meaning and purpose for you."
+          },
+          {
+            "level": "Average",
+            "text": "Your Connectedness score is average. You’re likely able to see what parts of your life give you fulfillment and the motivation to keep striving. Strengthen your connection to these spiritual supports by spending more time with them and drawing from their energy."
+          },
+          {
+            "level": "Above Average",
+            "text": "You scored high in Connectedness. It’s amazing to have a stable foundation in your faith and spirituality, and it’s helpful to have this to draw from during difficult times. You may even share what strengthens your spirituality and link to purpose in the hopes of inspiring others."
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Family",
+        "question": "My family plays a big role in my life",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "You scored low in Connectedness. It can be quite easy to feel alone these days. Reach out to others at your own pace, especially to your friends and family. You don't have to keep your struggles to yourself as it can be good to let things out every once in awhile."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Connectedness is below average. Healthy relationships with friends and family can be a great way to improve wellbeing, so reach out and share a few words when you can! Research shows that it only takes one connection to eradicate loneliness and increase wellbeing. No man is an island!"
+          },
+          {
+            "level": "Average",
+            "text": "You scored average for Connectedness. Great job staying connected to your sources of support! Know that you can always rely on your friends and family to pick you up when you are down. Take your relationships to the next level by verbalizing your gratitude, let them know how thankful you are to them!"
+          },
+          {
+            "level": "Above Average",
+            "text": "Excellent job! You are above average when it comes to Connectedness! You definitely value the relationships you have and you do a great job of maintaining them. Be there for them in their times of need, so that you can help enrich their wellbeing as well."
+          }
+        ]
+      },
+      {
+        "subDomain": "Meaning",
+        "question": "I am ashamed of my job",
+        "type": "Negative",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "You scored low in Connectedness. It might be difficult to make sense of things right now and you might be feeling lost at work. It's okay to just get by, you have nothing to be ashamed of. Always remember that you are more than your job or the work that you do."
+          },
+          {
+            "level": "Below Average",
+            "text": "You scored below average in Connectedness. To the best of your ability, try to recall your purpose for why you do things, especially at work. Take pride in your work because it might still be worth hanging on to them in the context of the bigger picture. But remember, your job isn't the only thing that should define you!"
+          },
+          {
+            "level": "Average",
+            "text": "Your Connectedness is average. To take things to the next level, channel your strengths and expertise, or any accomplishments or successes you've had. Recall what you did then and see if it will work for you today. Research shows that using strengths can turn into higher levels of meaning at work!"
+          },
+          {
+            "level": "Above Average",
+            "text": "You scored above average in Connectedness. Finding meaning and purpose in the work that you do can be a great source of motivation. Keep this up, and keep the meaning you attach to your work close to your chest. A next step could be to try and think of the bigger picture, who are you doing the work that you do for? How can this benefit them?"
+          }
+        ]
+      },
+      {
+        "subDomain": "Filipino Well-being - Religion and Spiritual Life",
+        "question": "My faith in a Higher Power has gotten me through tough times",
+        "type": "Positive",
+        "advise": [
+          {
+            "level": "Low",
+            "text": "Your Connectedness score is low. It is alright if life doesn't have that glow that it had before. You are not alone. If you feel lost, try talking to someone you trust with your feelings. Being able to share your feelings without holding back could help in reviving your spirit."
+          },
+          {
+            "level": "Below Average",
+            "text": "Your Connectedness score is below average. It might be difficult to trust that everything will go okay with the way things are right now. Try to detach yourself momentarily from your problems by entering into self-reflection or prayer. A few minutes in silence might give you better perspective on how certain things could be connected."
+          },
+          {
+            "level": "Average",
+            "text": "Your Connectedness score is average. You may feel connected to a higher power behind the events in your life right now. What rituals do you engage in, whether personal or with a community, that bring you closer to this higher power? Immersing further in these might improve the enlightenment or empowerment you receive from them."
+          },
+          {
+            "level": "Above Average",
+            "text": "Your Connectedness score is above average. That's wonderful! You may feel deeply connected with your religion, or the energy that moves around us. Remember that as you practice your spirituality, you can't fix one definition to an immeasurable higher power. Don't be afraid to redefine your beliefs through the unexpected places and people you meet!"
+          }
+        ]
+      }
+    ]
+  }
+]
