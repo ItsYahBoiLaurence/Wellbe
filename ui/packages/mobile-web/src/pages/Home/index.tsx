@@ -41,8 +41,8 @@ const QuoteCard = ({ title, subtitle }: QuoteCardProps) => (
 );
 
 const HomePage = () => {
-  const { latestSurvey } = useProfile();
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
+  // const { latestSurvey } = useProfile();
+  // const autoplay = useRef(Autoplay({ delay: 5000 }));
   return (
     <Box
       style={(t) => ({
@@ -77,7 +77,7 @@ const HomePage = () => {
             height: '100%',
           }}
         >
-          <Carousel
+          {/* <Carousel
             plugins={[autoplay.current]}
             onMouseEnter={autoplay.current.stop}
             onMouseLeave={autoplay.current.reset}
@@ -120,7 +120,7 @@ const HomePage = () => {
                 subtitle="Join us in building a community that supports each other."
               />
             </Carousel.Slide>
-          </Carousel>
+          </Carousel> */}
 
           <Box
             style={{ display: 'flex', justifyContent: 'center', zIndex: 50 }}

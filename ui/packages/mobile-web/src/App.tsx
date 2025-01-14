@@ -6,8 +6,9 @@ import { BrowserRouter } from 'react-router-dom';
 import { theme } from '../src/theme';
 import queryClient from './queryClient';
 import Routes from './Routes';
-import { AuthProvider } from './contexts/Auth';
+import { Authentication } from './contexts/Authentication'
 import { ProfileProvider } from './contexts/Profile';
+// import { AuthProvider } from './contexts/Auth';
 
 function App() {
   return (
@@ -16,9 +17,11 @@ function App() {
         <MantineEmotionProvider>
           <QueryClientProvider client={queryClient}>
             {/* <AuthProvider> */}
-            <ProfileProvider>
+            {/* <ProfileProvider> */}
+            <Authentication>
               <Routes />
-            </ProfileProvider>
+            </Authentication>
+            {/* </ProfileProvider> */}
             {/* </AuthProvider> */}
           </QueryClientProvider>
         </MantineEmotionProvider>
